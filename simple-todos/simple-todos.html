@@ -10,11 +10,14 @@
         <input type="checkbox" checked="{{hideCompleted}}"/>
         Hide completed tasks
       </label>
-    </header>
 
-    <form class="new-task">
-      <input type="text" name="text" placeholder="Add new task"/>
-    </form>
+      {{> loginButtons}}
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Add new task"/>
+      </form>
+
+    </header>
 
     <ul class="todo-list">
       {{#each tasks}}
