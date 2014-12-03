@@ -51,3 +51,22 @@ if (Meteor.isClient) {
   });
 }
 
+Meteor.methods({
+  addTasks: function (text) {
+    if (!Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+    Tasks.insert({
+      text: text,
+      createdAt: new Date(),
+      owner: Meteor.userId(),
+      username: Meteor.user().username
+    });
+  },
+  deleteTask: function () {
+
+  },
+  setChecked: function () {
+
+  }
+})
