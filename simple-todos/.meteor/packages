@@ -7,4 +7,6 @@ meteor-platform
 autopublish
 insecure
 particle4dev:sass
+accounts-ui
+accounts-password
 
