@@ -63,8 +63,8 @@ Meteor.methods({
       username: Meteor.user().username
     });
   },
-  deleteTask: function () {
-
+  deleteTask: function (taskId) {
+    Tasks.remove(taskId);
   },
   setChecked: function () {
 
